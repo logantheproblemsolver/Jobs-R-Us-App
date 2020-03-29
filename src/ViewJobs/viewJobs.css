@@ -1,0 +1,42 @@
+@media screen and (min-width: 325px) {
+  .viewJobs {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 35px;
+    grid-gap: 2em;
+    padding-bottom: 5em;
+  }
+
+  .h2 {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .jobSection {
+    text-align: center;
+  }
+
+
+}
+
+@media screen and (min-width: 500px) {
+  .viewJobs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 35px;
+    grid-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .viewJobs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 35px;
+    grid-gap: 2em;
+  }
+}

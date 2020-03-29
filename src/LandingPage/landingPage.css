@@ -1,0 +1,21 @@
+.landingPage {
+  width: 75%;
+  margin: auto auto;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5em;
+  margin-bottom: 10em;
+  margin-top: 5em;
+  height: 100%;
+}
+
+.h1 {
+  font-size: 3em;;
+}
+
+.landingPage p {
+  width: 75%;
+  font-size: 1.5em;
+}
