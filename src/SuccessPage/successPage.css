@@ -1,0 +1,15 @@
+.success {
+  height: 100%;
+  margin-top: 15em;
+  margin-bottom: 15em;
+  text-align: center;
+}
+
+.successText {
+  margin: auto auto;
+  font-size: 5em;
+}
+
+.subtext {
+  font-size: 2em;
+}

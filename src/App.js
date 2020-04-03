@@ -6,6 +6,8 @@ import LandingPage from './LandingPage/LandingPage';
 import UploadJobs from './UploadJobs/UploadJobs';
 import ViewJobs from './ViewJobs/ViewJobs';
 import './App.css'
+import SuccessPage from './SuccessPage/SuccessPage';
+import NotFound from './NotFound/notFound';
 
 class App extends React.Component {
   render() {
@@ -16,6 +18,8 @@ class App extends React.Component {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/uploadjobs" component={UploadJobs} />
           <Route exact path="/viewjobs" component={ViewJobs} />
+          <Route exact path="/success" component={SuccessPage} />
+          <Route exact path='/notfound' component={NotFound} />
         </Switch>
         <Footer />
       </div>

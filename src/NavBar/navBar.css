@@ -64,9 +64,6 @@
       color: black;
   }
 
-  nav a:hover {
-      font-size: 1.1em;
-  }
 
   .title:hover {
       font-size: 2em;

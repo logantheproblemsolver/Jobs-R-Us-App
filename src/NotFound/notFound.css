@@ -1,0 +1,15 @@
+.notFound {
+  height: 100%;
+  margin-top: 15em;
+  margin-bottom: 15em;
+  text-align: center;
+}
+
+.notFoundText {
+  margin: auto auto;
+  font-size: 5em;
+}
+
+.homeLink {
+  font-size: 2em;
+}
