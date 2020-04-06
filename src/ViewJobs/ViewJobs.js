@@ -1,59 +1,52 @@
 import React, {Component} from 'react';
 import './viewJobs.css';
+import JobData from './jobData/JobData';
+import config from '../config';
 
 class ViewJobs extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      jobs: [],
+      error: null,
+    }
+  }
+    setJobs = (jobs) => {
+      this.setState({
+        jobs,
+      })
+    }
+
+    componentDidMount() {
+      const APIEndpoint = config.API_ENDPOINT
+      const viewJobEndpoint = '/viewjobs'
+      const url = APIEndpoint + viewJobEndpoint;
+
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+        .then(
+          res => {
+            if(!res.ok) {
+              return res.json().then(error => Promise.reject(error))
+            }
+            return res.json();
+          })
+        .then(this.setJobs)
+        .catch(error => {
+          this.setState({error})
+        });
+      
+    }
+
+  
   render() {
     return (
-      <div className="viewJobs">
-        <section className="jobSection">
-          <p className="h2">Job Title</p>
-          <p>Job Company</p>
-          <p>Salary Range</p>
-          <p>Job Description</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link</a></p>
-        </section>
-        <section className="jobSection">
-          <p className="h2">Job Title 2</p>
-          <p>Job Company 2</p>
-          <p>Salary Range 2</p>
-          <p>Job Description 2</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link 2</a></p>
-        </section>
-        <section className="jobSection">
-          <p className="h2">Job Title 3</p>
-          <p>Job Company 3</p>
-          <p>Salary Range 3</p>
-          <p>Job Description 3</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link 3</a></p>
-        </section>
-        <section className="jobSection">
-          <p className="h2">Job Title 4</p>
-          <p>Job Company 4</p>
-          <p>Salary Range 4</p>
-          <p>Job Description 4</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link 4</a></p>
-        </section>
-        <section className="jobSection">
-          <p className="h2">Job Title 5</p>
-          <p>Job Company 5</p>
-          <p>Salary Range 5</p>
-          <p>Job Description 5</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link 5</a></p>
-        </section>
-        <section className="jobSection">
-          <p className="h2">Job Title 6</p>
-          <p>Job Company 6</p>
-          <p>Salary Range 6</p>
-          <p>Job Description 6</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link 6</a></p>
-        </section>
-        <section className="jobSection">
-          <p className="h2">Job Title 7</p>
-          <p>Job Company 7</p>
-          <p>Salary Range 7</p>
-          <p>Job Description 7</p>
-          <p><a href="//google.com" target="_blank" rel="noopener noreferrer">application link 7</a></p>
-        </section>
+      <div>
+        <JobData jobData={this.state.jobs}/>
       </div>
     )
   }
