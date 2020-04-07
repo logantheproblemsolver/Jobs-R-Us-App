@@ -18,9 +18,7 @@ class ViewJobs extends Component {
     }
 
     componentDidMount() {
-      const APIEndpoint = config.API_ENDPOINT
-      const viewJobEndpoint = '/viewjobs'
-      const url = APIEndpoint + viewJobEndpoint;
+      const url = config.API_ENDPOINT
 
       fetch(url, {
         method: 'GET',

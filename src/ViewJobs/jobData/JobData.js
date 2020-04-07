@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class JobData extends Component {
   render() {
-    const job = this.props.jobData.map((jobs) => {
+    const job = this.props.jobData.map((jobs, i) => {
       return (
-        <section className="jobSection" key={jobs.id}>
+        <section className="jobSection" key={i}>
           <p className="h2">{jobs.title}</p>
           <p>{jobs.company}</p>
           <p>{jobs.salary_range}</p>

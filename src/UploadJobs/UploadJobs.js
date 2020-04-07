@@ -62,9 +62,8 @@ class UploadJobs extends Component {
       description: description.value,
       link: link.value,
     }
-    const apiEndpoint = config.API_ENDPOINT;
-    const uploadEndpoint = '/uploadjobs';
-    const url = apiEndpoint + uploadEndpoint
+
+    const url = config.API_ENDPOINT;
 
     fetch(url, {
       method: 'POST',
