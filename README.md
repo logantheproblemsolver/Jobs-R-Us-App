@@ -12,4 +12,4 @@ I came up with the name "Jobs R' Us" because Toys R' Us use to be a great option
 
 <img src="UploadJobPage.PNG" alt="Upload Job page of Jobs R' Us" />
 
-<img src="ViewJobs.PNG" alt="View the current jobs of Jobs R' Us" />
+<img src="ViewJobsPage.PNG" alt="View the current jobs of Jobs R' Us" />
