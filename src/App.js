@@ -7,7 +7,7 @@ import UploadJobs from './UploadJobs/UploadJobs';
 import ViewJobs from './ViewJobs/ViewJobs';
 import './App.css'
 import SuccessPage from './SuccessPage/SuccessPage';
-import NotFound from './NotFound/notFound';
+import NotFound from './NotFound/NotFound';
 
 class App extends React.Component {
   render() {

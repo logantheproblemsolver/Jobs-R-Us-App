@@ -29,11 +29,12 @@ form label {
 
 .clearForm {
   margin-left: 2em;
-  background-color: rgb(241, 115, 115);
+  background-color: rgb(252, 42, 42);
+  width: 6em;
 }
 
 .submit {
-  background-color: rgb(32, 124, 178);
+  background-color: rgb(17, 226, 44);
 }
 .clearForm, .submit {
   height: 4em;
