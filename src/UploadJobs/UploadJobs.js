@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import './uploadJobs.css'
 import config from '../config';
 import { Redirect } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
+import './uploadJobs.css';
 
 class UploadJobs extends Component {
   constructor(props) {
@@ -21,36 +20,36 @@ class UploadJobs extends Component {
     t.preventDefault();
     this.setState({
       title: t.target.value,
-    })
-  }
+    });
+  };
 
   companyChange = (c) => {
     c.preventDefault();
     this.setState({
       company: c.target.value,
-    })
-  }
+    });
+  };
 
   salaryChange = (s) => {
     s.preventDefault();
     this.setState({
       salary_range: s.target.value,
-    })
-  }
+    });
+  };
 
   descriptionChange = (d) => {
     d.preventDefault();
     this.setState({
       description: d.target.value,
-    })
-  }
+    });
+  };
 
   linkChange = (l) => {
     l.preventDefault();
     this.setState({
       link: l.target.value,
-    })
-  }
+    });
+  };
 
   handleOnSubmit = submit => {
     submit.preventDefault();
@@ -61,7 +60,7 @@ class UploadJobs extends Component {
       salary_range: salary_range.value,
       description: description.value,
       link: link.value,
-    }
+    };
 
     const url = config.API_ENDPOINT;
 
@@ -74,21 +73,21 @@ class UploadJobs extends Component {
     })
       .then(res => {
         if (!res.ok) {
-          return res.json().then(error => Promise.reject(error))
+          return res.json().then(error => Promise.reject(error));
         }
-        return res.json()
+        return res.json();
       })
       .then(data => {
         console.log(data)
         this.setState({
           redirect: true,
-        })
+        });
       })
       .catch((err) => {
         this.setState({
           error: {err},
-        })
-      })
+        });
+      });
 
 
   }
@@ -96,7 +95,7 @@ class UploadJobs extends Component {
   render() {
     if (this.state.redirect === true) {
       return <Redirect to="/success" />
-    }
+    };
     return (
       <div className="uploadJob">
         <h1>Upload Job Here</h1>
@@ -163,8 +162,8 @@ class UploadJobs extends Component {
           </div>
         </form>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default UploadJobs;

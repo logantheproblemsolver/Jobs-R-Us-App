@@ -11,14 +11,14 @@ class JobData extends Component {
           <p>Description: {jobs.description}</p>
           <p>Application Link: <a href={jobs.link} target="_blank" rel="noopener noreferrer">Apply here!</a></p>
         </section>
-      )
+      );
     })
     return (
       <div className="viewJobs">
         {job}
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default JobData;

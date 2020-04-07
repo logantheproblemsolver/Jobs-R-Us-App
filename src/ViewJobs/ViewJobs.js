@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './viewJobs.css';
 import JobData from './jobData/JobData';
 import config from '../config';
+import './viewJobs.css';
 
 class ViewJobs extends Component {
   constructor(props) {
@@ -9,16 +9,16 @@ class ViewJobs extends Component {
     this.state = {
       jobs: [],
       error: null,
-    }
-  }
+    };
+  };
     setJobs = (jobs) => {
       this.setState({
         jobs,
-      })
-    }
+      });
+    };
 
     componentDidMount() {
-      const url = config.API_ENDPOINT
+      const url = config.API_ENDPOINT;
 
       fetch(url, {
         method: 'GET',
@@ -29,7 +29,7 @@ class ViewJobs extends Component {
         .then(
           res => {
             if(!res.ok) {
-              return res.json().then(error => Promise.reject(error))
+              return res.json().then(error => Promise.reject(error));
             }
             return res.json();
           })
@@ -37,17 +37,16 @@ class ViewJobs extends Component {
         .catch(error => {
           this.setState({error})
         });
-      
-    }
+    };
 
   
   render() {
     return (
-      <div>
+      <div className="viewJobPage">
         <JobData jobData={this.state.jobs}/>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default ViewJobs;

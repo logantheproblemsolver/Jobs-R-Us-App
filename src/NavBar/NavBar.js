@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
-import './navBar.css'
-
+import './navBar.css';
 
 class NavBar extends Component {
     constructor(props) {
@@ -10,22 +9,18 @@ class NavBar extends Component {
         this.state = {
             open: false,
             showList: false
-        }
-    }
-
+        };
+    };
 
     handleClick() {
         this.setState({
             open: !this.state.open,
             showList: !this.state.showList
         });
-    }
-
+    };
       
     render() {          
-        
         const {showList} = this.state
-
         // This navigation is so it's easier to navigate pages, and also it can be scaleable or resuable 
         return (
             <nav className="navigation">
@@ -44,12 +39,9 @@ class NavBar extends Component {
                         className="hamburger"
                     />     
                 </div>
-
-
             </nav>     
-        )
-
-    }
-}
+        );
+    };
+};
 
 export default NavBar;

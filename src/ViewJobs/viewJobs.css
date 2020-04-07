@@ -1,4 +1,9 @@
 @media screen and (min-width: 325px) {
+  .viewJobPage {
+    margin-top: 6em;
+    margin-bottom: 6em;
+  }
+  
   .viewJobs {
     display: grid;
     grid-template-columns: 100%;

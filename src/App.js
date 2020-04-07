@@ -5,9 +5,9 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from './LandingPage/LandingPage';
 import UploadJobs from './UploadJobs/UploadJobs';
 import ViewJobs from './ViewJobs/ViewJobs';
-import './App.css'
 import SuccessPage from './SuccessPage/SuccessPage';
 import NotFound from './NotFound/NotFound';
+import './App.css';
 
 class App extends React.Component {
   render() {
@@ -23,8 +23,8 @@ class App extends React.Component {
         </Switch>
         <Footer />
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default App;
