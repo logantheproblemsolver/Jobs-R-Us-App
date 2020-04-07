@@ -104,23 +104,59 @@ class UploadJobs extends Component {
           <label htmlFor="title" >
             Job Title: 
           </label>
-            <input type="text" className="input" id="tite" name="title" onChange={t => this.titleChange(t)} value={this.state.title}/>
+            <input 
+              type="text" 
+              className="input" 
+              id="tite" name="title" 
+              onChange={t => this.titleChange(t)} 
+              value={this.state.title} 
+              required 
+            />
           <label htmlFor="company">
             Company:
           </label>
-            <input type="text" className="input" id="company" name="company" onChange={c => this.companyChange(c)} value={this.state.company} />
+            <input 
+              type="text" 
+              className="input" 
+              id="company" 
+              name="company" 
+              onChange={c => this.companyChange(c)} 
+              value={this.state.company} 
+              required 
+            />
           <label htmlFor="salary_range">
             Salary Range:          
           </label>
-          <input type="text" className="input" id="salaray_range" name="salary_range" onChange={s => this.salaryChange(s)} value={this.state.salary_range} />
+          <input 
+            type="text" 
+            className="input" 
+            id="salaray_range" 
+            name="salary_range" 
+            onChange={s => this.salaryChange(s)} 
+            value={this.state.salary_range} 
+          />
           <label htmlFor="description">
             Job Description:   
           </label>
-          <textarea className="textarea" id="description" name="description" onChange={d => this.descriptionChange(d)} value={this.state.description} />
+          <textarea 
+            className="textarea" 
+            id="description" 
+            name="description" 
+            onChange={d => this.descriptionChange(d)} 
+            value={this.state.description} 
+            required 
+          />
           <label htmlFor="link">
             Application Link:           
           </label>
-          <input type="url" className="input" name="link" onChange={l => this.linkChange(l)} value={this.state.link} />
+          <input 
+            type="url" 
+            className="input" 
+            name="link" 
+            onChange={l => this.linkChange(l)} 
+            value={this.state.link} 
+            required 
+          />
           <div className="buttons">
             <button type="submit" className="submit">Upload Job!</button>
             <button type="reset" className="clearForm">Cancel</button>

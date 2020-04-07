@@ -6,10 +6,10 @@ class JobData extends Component {
       return (
         <section className="jobSection" key={i}>
           <p className="h2">{jobs.title}</p>
-          <p>{jobs.company}</p>
-          <p>{jobs.salary_range}</p>
-          <p>{jobs.description}</p>
-          <p><a href={jobs.link} target="_blank" rel="noopener noreferrer">Apply here!</a></p>
+          <p>Company: {jobs.company}</p>
+          <p>Salary: {jobs.salary_range}</p>
+          <p>Description: {jobs.description}</p>
+          <p>Application Link: <a href={jobs.link} target="_blank" rel="noopener noreferrer">Apply here!</a></p>
         </section>
       )
     })
