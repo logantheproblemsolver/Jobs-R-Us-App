@@ -20,7 +20,7 @@ class NavBar extends Component {
     };
       
     render() {          
-        const {showList} = this.state
+        const {showList} = this.state;
         // This navigation is so it's easier to navigate pages, and also it can be scaleable or resuable 
         return (
             <nav className="navigation">
