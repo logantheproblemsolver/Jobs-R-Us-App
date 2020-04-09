@@ -2,9 +2,15 @@
 
 <a href="https://jobs-r-us.now.sh/">Live App</a>
 
-This is a react application to provide a job board.
+<h2>What can you do with this application?</h2>
+
+This is a react application to provide a job board. With this application you are able to upload jobs and also view uploaded jobs. In the near future it will include being able to delete jobs, edit jobs, and a sign in. 
+
+<h2>Tech Used</h2>
 
 This application was made using React and tested using Jest. 
+
+<h2>Why was this made?</h2>
 
 Looking at job boards these days they are either too expensive to post on or it's for certain niches. This job board can be used to help smaller businesses by providing them a cheaper option for job bords, and they don't have to worry about their niche. 
 
